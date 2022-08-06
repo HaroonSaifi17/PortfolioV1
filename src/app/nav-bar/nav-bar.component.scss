@@ -1,0 +1,107 @@
+$Color: (
+  navy: #0a192f,
+  light_navy: #112240,
+  lightest_navy: #233554,
+  slate: #8892b0,
+  light_slate: #a8b2d1,
+  lightest_slate: #ccd6f6,
+  white: #e6f1ff,
+  green: #64ffda,
+);
+@function color($color-name) {
+  @return map-get($Color, $color-name);
+}
+.navbar {
+  background: color(navy);
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+}
+.logo_text {
+  margin-left: -26px;
+  margin-top: 12px;
+  color: color(green);
+}
+
+.nav_menu ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav_menu ul li {
+  padding: 10px;
+  font-size: 13px;
+  margin-right: 10px;
+}
+.nav_menu ul li a:nth-child(1) {
+  color: color(green);
+  text-decoration: none;
+  padding-right: 5px;
+}
+.nav_menu ul li a:nth-child(2) {
+  color: color(lightest_slate);
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .nav_button {
+    background: transparent;
+    aspect-ratio: 1;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+  }
+  .line1 {
+    background: color(green);
+    height: 10%;
+    width: 80%;
+    border-radius: 50px;
+    margin: 10%;
+    transition-duration: 0.5s;
+  }
+  .line2 {
+    background: color(green);
+    height: 10%;
+    width: 40%;
+    border-radius: 50px;
+    margin: 10%;
+    transition-duration: 0.5s;
+  }
+  .line1_close {
+    transform: rotate(45deg);
+    margin-bottom: -5%;
+  }
+  .line2_close {
+    transform: rotate(-45deg);
+    margin-top: -5%;
+    width: 80%;
+  }
+  .nav_menu {
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    right: -80vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: color(light_navy);
+    transition-duration: 0.5s;
+  }
+  .open_nav_menu {
+    transform: translateX(-80vw);
+  }
+  .nav_menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_menu ul li {
+  }
+}
