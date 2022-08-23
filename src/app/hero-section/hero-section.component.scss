@@ -1,0 +1,70 @@
+$Color: (
+  navy: #0a192f,
+  light_navy: #112240,
+  lightest_navy: #233554,
+  slate: #8892b0,
+  light_slate: #a8b2d1,
+  lightest_slate: #ccd6f6,
+  white: #e6f1ff,
+  green: #64ffda,
+);
+@function color($color-name) {
+  @return map-get($Color, $color-name);
+}
+
+@font-face {
+  font-family: "SFMono";
+  src: url("../fonts/SFMono/SFMono-Regular.woff2") format("woff2");
+  src: url("../fonts/SFMono/SFMono-Regular.woff") format("woff"),
+    url("../fonts/SFMono/SFMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CalibreBold";
+  src: url("../fonts/Calibre/Calibre-Semibold.woff2") format("woff2");
+  src: url("../fonts/Calibre/Calibre-Semibold.woff") format("woff"),
+    url("../fonts/Calibre/Calibre-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/Calibre/Calibre-Regular.woff2") format("woff2");
+  src: url("../fonts/Calibre/Calibre-Regular.woff") format("woff"),
+    url("../fonts/Calibre/Calibre-Regular.ttf") format("truetype");
+}
+.hero {
+  padding: 0 10%;
+  height: calc(100vw - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  color: color(green);
+  margin-bottom: 30px;
+  font-family: SFMono;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  margin-left: 5px;
+}
+h2 {
+  color: color(lightest_slate);
+  font-family: CalibreBold;
+  font-size: clamp(2rem, 9vw, 5rem);
+  line-height: 90%;
+  margin-top: 10px;
+}
+
+h3 {
+  color: color(light_slate);
+  font-family: CalibreBold;
+  font-size: clamp(1rem, 9vw, 5rem);
+  margin-top: 10px;
+  line-height: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+p {
+  color: color(light_slate);
+  font-family: Calibre;
+  font-size: clamp(1rem, 4vw, 2.2rem);
+  line-height: 140%;
+}

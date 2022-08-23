@@ -114,12 +114,15 @@ $Color: (
   .nav_menu ul {
     display: flex;
     flex-direction: column;
+    background: inherit;
   }
   .nav_menu ul li {
     margin: 10px;
+    background: inherit;
   }
   .nav_menu ul li a {
     font-size: 1rem;
+    background: inherit;
   }
   .blur_box {
     display: block;
