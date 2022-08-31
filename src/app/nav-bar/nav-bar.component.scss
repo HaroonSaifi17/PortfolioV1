@@ -11,12 +11,6 @@ $Color: (
 @function color($color-name) {
   @return map-get($Color, $color-name);
 }
-@font-face {
-  font-family: "SFMono";
-  src: url("../fonts/SFMono/SFMono-Regular.woff2") format("woff2");
-  src: url("../fonts/SFMono/SFMono-Regular.woff") format("woff"),
-    url("../fonts/SFMono/SFMono-Regular.ttf") format("truetype");
-}
 .navbar {
   background: color(navy);
   height: 100px;
@@ -26,13 +20,21 @@ $Color: (
   align-items: center;
 }
 .logo {
-  display: flex;
   z-index: 3;
+  position: relative;
 }
 .logo_text {
-  margin-left: -26px;
-  margin-top: 12px;
+  height: 40px;
+  width: 40px;
   color: color(green);
+  font-family: 'Calibrebold';
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+       font-size: 20px;
 }
 
 .nav_menu ul {
@@ -48,12 +50,12 @@ $Color: (
   color: color(green);
   text-decoration: none;
   padding-right: 5px;
-  font-family: "SFMono";
+  font-family: 'SFMono';
 }
 .nav_menu ul li a:nth-child(2) {
   color: color(lightest_slate);
   text-decoration: none;
-  font-family: "SFMono";
+  font-family: 'SFMono';
 }
 .blur_box {
   display: none;

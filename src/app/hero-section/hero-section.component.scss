@@ -11,26 +11,6 @@ $Color: (
 @function color($color-name) {
   @return map-get($Color, $color-name);
 }
-
-@font-face {
-  font-family: "SFMono";
-  src: url("../fonts/SFMono/SFMono-Regular.woff2") format("woff2");
-  src: url("../fonts/SFMono/SFMono-Regular.woff") format("woff"),
-    url("../fonts/SFMono/SFMono-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "CalibreBold";
-  src: url("../fonts/Calibre/Calibre-Semibold.woff2") format("woff2");
-  src: url("../fonts/Calibre/Calibre-Semibold.woff") format("woff"),
-    url("../fonts/Calibre/Calibre-Semibold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Calibre";
-  src: url("../fonts/Calibre/Calibre-Regular.woff2") format("woff2");
-  src: url("../fonts/Calibre/Calibre-Regular.woff") format("woff"),
-    url("../fonts/Calibre/Calibre-Regular.ttf") format("truetype");
-}
 .hero {
   padding: 0 10%;
   height: calc(100vw - 40px);
@@ -40,7 +20,7 @@ $Color: (
 }
 h1 {
   color: color(green);
-  margin-bottom: 30px;
+  margin-bottom: 3%;
   font-family: SFMono;
   font-size: clamp(0.5rem, 4vw, 1.5rem);
   margin-left: 5px;

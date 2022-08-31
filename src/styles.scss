@@ -5,3 +5,23 @@
 body {
   background: #0a192f;
 }
+
+@font-face {
+  font-family: 'SFMono';
+  src: url('app/fonts/SFMono/SFMono-Regular.woff2') format('woff2');
+  src: url('app/fonts/SFMono/SFMono-Regular.woff') format('woff'),
+    url('app/fonts/SFMono/SFMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CalibreBold';
+  src: url('app/fonts/Calibre/Calibre-Semibold.woff2') format('woff2');
+  src: url('app/fonts/Calibre/Calibre-Semibold.woff') format('woff'),
+    url('app/fonts/Calibre/Calibre-Semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('app/fonts/Calibre/Calibre-Regular.woff2') format('woff2');
+  src: url('app/fonts/Calibre/Calibre-Regular.woff') format('woff'),
+    url('app/fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+}
