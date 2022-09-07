@@ -1,50 +1,38 @@
-$Color: (
-  navy: #0a192f,
-  light_navy: #112240,
-  lightest_navy: #233554,
-  slate: #8892b0,
-  light_slate: #a8b2d1,
-  lightest_slate: #ccd6f6,
-  white: #e6f1ff,
-  green: #64ffda,
-);
-@function color($color-name) {
-  @return map-get($Color, $color-name);
-}
 .hero {
   padding: 0 10%;
-  height: calc(100vw - 40px);
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 h1 {
-  color: color(green);
+  color: var(--green);
   margin-bottom: 3%;
   font-family: SFMono;
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  font-size: clamp(0.7rem, 3vw, 1.7rem);
   margin-left: 5px;
 }
 h2 {
-  color: color(lightest_slate);
+  color: var(--lightest-slate);
   font-family: CalibreBold;
-  font-size: clamp(2rem, 9vw, 5rem);
+  font-size: clamp(40px, 8vw, 80px);
   line-height: 90%;
   margin-top: 10px;
 }
 
 h3 {
-  color: color(light_slate);
+  color: var(--slate);
   font-family: CalibreBold;
-  font-size: clamp(1rem, 9vw, 5rem);
+  font-size: clamp(40px, 8vw, 80px);
   margin-top: 10px;
   line-height: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-p {
-  color: color(light_slate);
+.hero__para{
+  color: var(--slate);
   font-family: Calibre;
-  font-size: clamp(1rem, 4vw, 2.2rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   line-height: 140%;
+  max-width: 540px;
 }

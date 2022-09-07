@@ -1,26 +1,8 @@
-<div class="navbar">
+<div id="Home" class="navbar">
   <div class="logo">
-    <div class="logo_wrapper">
-      <svg
-        version="1.1"
-        id="Layer_1"
-        x="0px"
-        y="0px"
-        viewBox="0 0 512 512"
-        height="40px"
-      >
-        <polygon
-          style="fill: #0a192f"
-          points="41.356,374.401 41.356,137.607 256,18.652 470.644,137.607 470.644,374.401 256,493.357 "
-        />
-        <path
-          style="fill: #64ffda"
-          d="M256,37.303l198.333,109.919v217.555L256,474.697L57.667,364.778V147.222L256,37.303 M256,0
-	L25.045,128v256L256,512l230.955-128V128L256,0z"
-        />
-      </svg>
-    </div>
-    <div class="logo_text"><span>H</span></div>
+    <a href="#Home">
+      <app-logo></app-logo>
+    </a>
   </div>
   <div (click)="oc()" class="nav_button">
     <div class="line1 {{ close_line1 }}"></div>
@@ -30,20 +12,26 @@
   <div class="nav_menu {{ open_menu }}">
     <ul>
       <li>
-        <a href="">01.</a>
-        <a href="">About</a>
+        <a (click)="oc()" href="#About"
+          ><span class="nav_no">01.</span><span class="nav_text">About</span></a
+        >
       </li>
       <li>
-        <a href="">02.</a>
-        <a href="">Experience</a>
+        <a (click)="oc()" href="#Experience"
+          ><span class="nav_no">02.</span
+          ><span class="nav_text">Experience</span></a
+        >
       </li>
       <li>
-        <a href="">03.</a>
-        <a href="">Blog</a>
+        <a (click)="oc()" href=""
+          ><span class="nav_no">03.</span><span class="nav_text">Blog</span></a
+        >
       </li>
       <li>
-        <a href="">04.</a>
-        <a href="">Contact</a>
+        <a (click)="oc()" href="#Contact"
+          ><span class="nav_no">04.</span
+          ><span class="nav_text">Contact</span></a
+        >
       </li>
     </ul>
   </div>

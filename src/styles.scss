@@ -1,6 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 16px;
 }
 body {
   background: #0a192f;
