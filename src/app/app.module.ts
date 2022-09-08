@@ -9,6 +9,10 @@ import { AboutMeComponent } from './components/sections/about-me/about-me.compon
 import { ContactComponent } from './components/sections/contact/contact.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { GithubComponent } from './components/icons/github.component'
+import { CodepenComponent } from './components/icons/codepen.component'
+import { InstagramComponent } from './components/icons/instagram.component'
+import { LinkedinComponent } from './components/icons/linkedin.component'
+import { TwitterComponent } from './components/icons/twitter.component'
 import { LogoComponent } from './components/icons/logo.component'
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { LogoComponent } from './components/icons/logo.component'
     ContactComponent,
     FooterComponent,
     GithubComponent,
-    LogoComponent
+    LogoComponent,
+    CodepenComponent,
+    InstagramComponent,
+    LinkedinComponent,
+    TwitterComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

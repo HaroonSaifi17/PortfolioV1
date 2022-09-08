@@ -32,7 +32,6 @@ import { Component } from '@angular/core'
         </g>
       </g>
     </svg>
-  `,
-  styles: ['svg:hover{stroke:green}'],
+  `
 })
 export class LogoComponent {}

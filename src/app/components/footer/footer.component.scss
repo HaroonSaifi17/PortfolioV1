@@ -1,33 +1,14 @@
-$Color: (
-  navy: #0a192f,
-  light_navy: #112240,
-  lightest_navy: #233554,
-  slate: #8892b0,
-  light_slate: #a8b2d1,
-  lightest_slate: #ccd6f6,
-  white: #e6f1ff,
-  green: #64ffda,
-);
-@function color($color-name) {
-  @return map-get($Color, $color-name);
-}
-svg {
-  height: 24px;
-  width: 24px;
-  stroke-width: 2;
-  stroke: color(lightest_slate);
-}
 .f_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 5vw;
   & p,
   & p a {
     text-align: center;
     font-family: SFMono;
     font-size: clamp(0.7rem ,3vw,1.2rem);
-    color: color(lightest_slate);
+    color: var(--lightest-slate);
     text-decoration: none;
   }
 }
@@ -45,20 +26,24 @@ svg {
     display: block;
     position: fixed;
     bottom: 0;
-    right: 20px;
+    right: 25px;
     z-index: 1;
-    & span {
+    & a {
       writing-mode: vertical-lr;
       font-family: SFMono;
-      font-size: 1rem;
-      color: color(lightest_slate);
+    font-size: clamp(0.7rem ,1.7vw,2.5rem);
+      color: var(--lightest-slate);
     }
   }
+    .f_mail a:hover{
+      color: var(--green);
+    }
+  
   .logo {
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 20px;
+    left: 25px;
     bottom: 0;
     margin: 0;
   }
@@ -67,8 +52,9 @@ svg {
   }
   .f_line {
     height: 20vh;
-    width: 2px;
-    background: color(lightest_slate);
+    width: 1px;
+    background: var(--light-slate);
     margin: 0 auto;
+    margin-top: 10px;
   }
 }

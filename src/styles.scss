@@ -5,9 +5,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-html {
-  font-size: 16px;
-}
+
 body {
   background: #0a192f;
 }
@@ -45,4 +43,17 @@ body {
   src: url('./assets/fonts/Calibre/Calibre-Regular.woff2') format('woff2');
   src: url('./assets/fonts/Calibre/Calibre-Regular.woff') format('woff'),
     url('./assets/fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+}
+.svg_logo {
+  height: 24px;
+  width: 24px;
+  stroke-width: 2;
+  stroke: var(--light-slate);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.svg_logo:hover{
+  stroke: var(--green);
 }
