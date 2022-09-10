@@ -1,6 +1,6 @@
-<div id="Home" class="navbar">
+<div class="navbar">
   <div class="logo">
-    <a href="#Home">
+    <a class="animate_down" href="#Home">
       <app-logo></app-logo>
     </a>
   </div>
@@ -11,23 +11,23 @@
   <div (click)="oc()" class="blur_box {{ openBlurBox }}"></div>
   <div class="nav_menu {{ open_menu }}">
     <ul>
-      <li>
+      <li class="animate_down" [style.animationDelay]="'100ms'" >
         <a (click)="oc()" href="#About"
           ><span class="nav_no">01.</span><span class="nav_text">About</span></a
         >
       </li>
-      <li>
+      <li [style.animationDelay]="'200ms'" class="animate_down">
         <a (click)="oc()" href="#Experience"
           ><span class="nav_no">02.</span
           ><span class="nav_text">Experience</span></a
         >
       </li>
-      <li>
+      <li [style.animationDelay]="'300ms'" class="animate_down">
         <a (click)="oc()" href=""
           ><span class="nav_no">03.</span><span class="nav_text">Blog</span></a
         >
       </li>
-      <li>
+      <li [style.animationDelay]="'400ms'" class="animate_down">
         <a (click)="oc()" href="#Contact"
           ><span class="nav_no">04.</span
           ><span class="nav_text">Contact</span></a

@@ -3,17 +3,17 @@ import { Component, OnInit } from '@angular/core'
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss'],
-})
+  styleUrls: ['./nav-bar.component.scss']
+  })
+
 export class NavBarComponent implements OnInit {
   open_menu: string = ''
   close_line1: string = ''
   close_line2: string = ''
   openBlurBox: string = ''
+  constructor() { }
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   oc(): void {
     if (this.open_menu == '') {
       this.open_menu = 'open_nav_menu'

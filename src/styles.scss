@@ -57,3 +57,33 @@ body {
 .svg_logo:hover{
   stroke: var(--green);
 }
+.animate_down{
+  opacity: 0;
+  animation: down 500ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes down{
+0%{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+100%{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+.animate_up{
+  opacity: 0;
+  animation: up 500ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes up{
+0%{
+  transform: translateY(100%);
+  opacity: 0;
+}
+100%{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
