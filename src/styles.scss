@@ -54,36 +54,44 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.svg_logo:hover{
+.svg_logo:hover {
   stroke: var(--green);
 }
-.animate_down{
+.animate_down {
   opacity: 0;
   animation: down 500ms ease-in;
   animation-fill-mode: forwards;
 }
-@keyframes down{
-0%{
-  transform: translateY(-100%);
-  opacity: 0;
+@keyframes down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-100%{
-  transform: translateY(0);
-  opacity: 1;
-}
-}
-.animate_up{
+.animate_up {
   opacity: 0;
   animation: up 500ms ease-in;
   animation-fill-mode: forwards;
 }
-@keyframes up{
-0%{
-  transform: translateY(100%);
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.scroll-effect {
+  transform: translateY(50px);
   opacity: 0;
 }
-100%{
-  transform: translateY(0);
-  opacity: 1;
-}
+.scroll-effect-anmtn {
+  transition-duration: 600ms;
+  transition-timing-function: ease-in;
 }

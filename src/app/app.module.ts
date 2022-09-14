@@ -13,7 +13,8 @@ import { CodepenComponent } from './components/icons/codepen.component'
 import { InstagramComponent } from './components/icons/instagram.component'
 import { LinkedinComponent } from './components/icons/linkedin.component'
 import { TwitterComponent } from './components/icons/twitter.component'
-import { LogoComponent } from './components/icons/logo.component'
+import { LogoComponent } from './components/icons/logo.component';
+import { ScrollEffectDirective } from './scroll-effect.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LogoComponent } from './components/icons/logo.component'
     CodepenComponent,
     InstagramComponent,
     LinkedinComponent,
-    TwitterComponent
+    TwitterComponent,
+    ScrollEffectDirective
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
