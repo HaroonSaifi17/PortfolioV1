@@ -11,6 +11,9 @@
     color: var(--lightest-slate);
     text-decoration: none;
   }
+  & p a:hover{
+    color: var(--green);
+  }
 }
 .logo a {
   margin: 10px;
@@ -20,6 +23,9 @@
 }
 .f_mail {
   display: none;
+}
+a:hover{
+   color: var(--green);
 }
 @media (min-width: 700px) {
   .f_mail {

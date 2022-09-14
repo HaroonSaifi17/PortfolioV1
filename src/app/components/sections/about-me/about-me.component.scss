@@ -57,14 +57,12 @@
 .p_child {
   width: 50%;
 }
-.triangle {
-  fill: transparent;
-  stroke: var(--green);
-  stroke-width: 1;
-}
 .p_div ul li {
   list-style-type: none;
   margin-bottom: 10px;
+}
+.filter:hover{
+  background: transparent;
 }
 .p_div ul li p {
   font-family: SFMono;

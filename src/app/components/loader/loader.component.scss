@@ -1,0 +1,24 @@
+.ldr-wpr {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  background: var(--navy);
+}
+.path {
+  stroke-dasharray: 270.1082763671875;
+  stroke-dashoffset: 270.1082763671875;
+  animation: dash 1000ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 270.1082763671875;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

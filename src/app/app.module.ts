@@ -15,6 +15,8 @@ import { LinkedinComponent } from './components/icons/linkedin.component'
 import { TwitterComponent } from './components/icons/twitter.component'
 import { LogoComponent } from './components/icons/logo.component';
 import { ScrollEffectDirective } from './scroll-effect.directive'
+import { TriangleComponent } from './components/icons/triangle.component';
+import { LoaderComponent } from './components/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { ScrollEffectDirective } from './scroll-effect.directive'
     InstagramComponent,
     LinkedinComponent,
     TwitterComponent,
-    ScrollEffectDirective
+    ScrollEffectDirective,
+    TriangleComponent,
+    LoaderComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

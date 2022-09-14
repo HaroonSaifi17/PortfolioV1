@@ -5,16 +5,17 @@
     </a>
   </div>
   <div (click)="oc()" class="nav_button">
-    <div class="line1 {{ close_line1 }}"></div>
-    <div class="line2 {{ close_line2 }}"></div>
+    <div class="line1" [class]="close_line1"></div>
+    <div class="line2" [class]="close_line2"></div>
   </div>
-  <div (click)="oc()" class="blur_box {{ openBlurBox }}"></div>
-  <div class="nav_menu {{ open_menu }}">
+  <div (click)="oc()" class="blur_box" [class]="openBlurBox"></div>
+  <div class="nav_menu" [class]="open_menu">
     <ul>
-      <li class="animate_down" [style.animationDelay]="'100ms'" >
+      <li class="animate_down" [style.animationDelay]="'100ms'">
         <a (click)="oc()" href="#About"
-          ><span class="nav_no">01.</span><span class="nav_text">About</span></a
-        >
+          ><span class="nav_no">01.</span>
+          <span class="nav_text">About</span>
+        </a>
       </li>
       <li [style.animationDelay]="'200ms'" class="animate_down">
         <a (click)="oc()" href="#Experience"

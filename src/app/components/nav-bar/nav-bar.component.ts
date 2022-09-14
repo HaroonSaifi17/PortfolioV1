@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./nav-bar.component.scss']
   })
 
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
   open_menu: string = ''
   close_line1: string = ''
   close_line2: string = ''
   openBlurBox: string = ''
-  constructor() { }
-
-  ngOnInit(): void { }
+  constructor() {}
   oc(): void {
     if (this.open_menu == '') {
       this.open_menu = 'open_nav_menu'
@@ -22,7 +20,6 @@ export class NavBarComponent implements OnInit {
       this.openBlurBox = 'open_blur_box'
       return
     }
-
     this.open_menu = ''
     this.close_line1 = ''
     this.close_line2 = ''
