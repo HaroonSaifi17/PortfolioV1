@@ -17,6 +17,8 @@ import { LogoComponent } from './components/icons/logo.component';
 import { ScrollEffectDirective } from './scroll-effect.directive'
 import { TriangleComponent } from './components/icons/triangle.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BlogComponent } from './pages/blog/blog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { LoaderComponent } from './components/loader/loader.component';
     TwitterComponent,
     ScrollEffectDirective,
     TriangleComponent,
-    LoaderComponent
+    LoaderComponent,
+    HomeComponent,
+    BlogComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

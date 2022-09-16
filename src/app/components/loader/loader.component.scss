@@ -6,13 +6,39 @@
   justify-content: center;
   position: fixed;
   z-index: 10;
-  background: var(--navy);
+  background: var(--dark-navy);
+  top: -100px;
+}
+.ldr{
+  width: 100px;
+  height: 100px;
+  animation: scale 300ms ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms;
 }
 .path {
+  fill: transparent;
+  stroke: var(--green);
+  stroke-width: 5;
+}
+.polygon {
+  fill: transparent;
+  stroke: var(--green);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   stroke-dasharray: 270.1082763671875;
   stroke-dashoffset: 270.1082763671875;
   animation: dash 1000ms ease-in;
   animation-fill-mode: forwards;
+}
+@keyframes scale{
+0% {
+  transform: scale(1);
+}
+100%{
+  transform: scale(0.1);
+}
 }
 @keyframes dash {
   0% {

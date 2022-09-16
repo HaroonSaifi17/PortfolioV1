@@ -36,6 +36,10 @@
 .nav_menu ul li a span:hover {
   color: var(--green);
 }
+.active{
+  background-color: white;
+  color: black;
+}
 @media (max-width: 600px) {
   .nav_button {
     background: transparent;
