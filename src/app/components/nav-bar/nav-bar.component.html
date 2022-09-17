@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="logo">
     <a
-          (click)="darkTheme()"
+      (click)="darkTheme()"
       class="animate_down"
       [style.animationDelay]="'1600ms'"
       routerLink=""
@@ -17,27 +17,30 @@
   <div class="nav_menu" [class]="open_menu">
     <ul>
       <li class="animate_down" [style.animationDelay]="'1700ms'">
-        <a (click)="slide()" routerLink=""
+        <a (click)="slide()" (click)="darkTheme()" routerLink=""
+          routerLinkActive="active"
           ><span class="nav_no">01.</span>
           <span class="nav_text">Home</span>
         </a>
       </li>
       <li [style.animationDelay]="'1800ms'" class="animate_down">
-        <a (click)="slide" routerLink="/#About"
-          ><span class="nav_no">02.</span
-          ><span class="nav_text">About</span></a
+        <a (click)="slide()" (click)="darkTheme()" (click)="navigate('#About')"
+          routerLinkActive="active"
+          ><span class="nav_no">02.</span><span class="nav_text">About</span></a
         >
       </li>
       <li [style.animationDelay]="'1900ms'" class="animate_down">
-        <a
-          (click)="slide()"
-          (click)="lightTheme()"
-          routerLink="/blog"
+        <a (click)="slide()" (click)="lightTheme()" routerLink="/blog"
+          routerLinkActive="active"
           ><span class="nav_no">03.</span><span class="nav_text">Blog</span></a
         >
       </li>
       <li [style.animationDelay]="'2000ms'" class="animate_down">
-        <a (click)="slide()" routerLink="/#Contact"
+        <a
+          (click)="slide()"
+          (click)="darkTheme()"
+          (click)="navigate('#Contact')"
+          routerLinkActive="active"
           ><span class="nav_no">04.</span
           ><span class="nav_text">Contact</span></a
         >

@@ -1,4 +1,4 @@
-import { Component , OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 
 @Component({
@@ -7,7 +7,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
-  Name:string;
+  Name: string
+  boolean: boolean = false
   open_menu: string = ''
   close_line1: string = ''
   close_line2: string = ''
@@ -20,7 +21,7 @@ export class NavBarComponent implements OnInit {
     { name: 'slate', value: 'black' },
     { name: 'light-slate', value: 'darkgrey' },
     { name: 'lightest-slate', value: 'grey' },
-    { name: 'green', value: '#0a192f' }
+    { name: 'green', value: '#0a192f' },
   ]
   Darkstyles = [
     { name: 'navy', value: '#0a192f' },
@@ -30,14 +31,19 @@ export class NavBarComponent implements OnInit {
     { name: 'slate', value: '#8892b0' },
     { name: 'light-slate', value: '#a8b2d1' },
     { name: 'lightest-slate', value: '#ccd6f6' },
-    { name: 'green', value: '#64ffda' }
+    { name: 'green', value: '#64ffda' },
   ]
-  constructor(private router:Router) {}
+  constructor(private router: Router) {}
   ngOnInit(): void {
-    this.router.events.subscribe((url)=>{this.Name=this.router.url})
-      if (this.Name != "b") {
+    this.router.events.subscribe((url) => {
+      this.Name = this.router.url.toString().substring(1, 5)
+    })
+    setTimeout(() => {
+      this.boolean = this.Name == 'blog'
+      if (this.boolean) {
         this.lightTheme()
       }
+    }, 0.000001)
   }
   slide(): void {
     if (this.open_menu == '') {
@@ -61,5 +67,8 @@ export class NavBarComponent implements OnInit {
     this.Lightstyles.forEach((data) => {
       document.documentElement.style.setProperty(`--${data.name}`, data.value)
     })
+  }
+  navigate(fregment: string): void {
+    this.router.navigateByUrl('' + fregment)
   }
 }
