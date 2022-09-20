@@ -122,3 +122,18 @@
     transform: translateX(-100vw);
   }
 }
+.animate_down {
+  opacity: 0;
+  animation: down 500ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

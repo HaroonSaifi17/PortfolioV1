@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core'
+import { LoaderDelayService } from './loader-delay.service'
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,11 @@ import { Component, OnInit} from '@angular/core'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title: string = 'Haroon Saifi'
+constructor(loaderDelay:LoaderDelayService){
+    loaderDelay.loader()
+  }
   Timer: boolean = true
   ngOnInit(): void {
-    setTimeout(() => { this.Timer = false }, 1500)
+    setTimeout(() => { this.Timer = false },1500)
   }
 }
