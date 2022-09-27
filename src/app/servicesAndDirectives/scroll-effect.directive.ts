@@ -4,7 +4,7 @@ import { Directive, ElementRef, OnInit } from '@angular/core'
   selector: '[appScrollEffect]',
 })
 export class ScrollEffectDirective implements OnInit {
-  constructor(private element: ElementRef) {}
+  constructor(private element: ElementRef) { }
 
   private intersectionObserver: IntersectionObserver
 
@@ -15,8 +15,8 @@ export class ScrollEffectDirective implements OnInit {
     }
     const callback = (entries: any) => {
       entries.forEach((entry: any) => {
-          entry.target.classList.add("scroll-effect");
-          entry.target.classList.add("scroll-effect-anmtn");
+        entry.target.classList.add("scroll-effect");
+        entry.target.classList.add("scroll-effect-anmtn");
         if (entry.isIntersecting) {
           entry.target.classList.remove("scroll-effect");
           this.intersectionObserver.unobserve(entry.target)

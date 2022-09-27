@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoaderDelayService } from 'src/app/loader-delay.service';
+import { LoaderDelayService } from 'src/app/servicesAndDirectives/loader-delay.service';
 
 @Component({
   selector: 'app-hero-section',

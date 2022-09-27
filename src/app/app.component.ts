@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core'
-import { LoaderDelayService } from './loader-delay.service'
+import { LoaderDelayService } from './servicesAndDirectives/loader-delay.service'
 
 @Component({
   selector: 'app-root',

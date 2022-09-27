@@ -4,21 +4,23 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component'
-import { HeroSectionComponent } from './components/sections/hero-section/hero-section.component'
-import { AboutMeComponent } from './components/sections/about-me/about-me.component'
-import { ContactComponent } from './components/sections/contact/contact.component'
+import { HeroSectionComponent } from './components/hero-section/hero-section.component'
+import { AboutMeComponent } from './components/about-me/about-me.component'
+import { ContactComponent } from './components/contact/contact.component'
 import { FooterComponent } from './components/footer/footer.component'
-import { GithubComponent } from './components/icons/github.component'
-import { CodepenComponent } from './components/icons/codepen.component'
-import { InstagramComponent } from './components/icons/instagram.component'
-import { LinkedinComponent } from './components/icons/linkedin.component'
-import { TwitterComponent } from './components/icons/twitter.component'
-import { LogoComponent } from './components/icons/logo.component';
-import { ScrollEffectDirective } from './scroll-effect.directive'
-import { TriangleComponent } from './components/icons/triangle.component';
+import { BlogFooterComponent } from './components/blog-footer/blog-footer.component'
+import { GithubComponent } from './icons/github.component'
+import { CodepenComponent } from './icons/codepen.component'
+import { InstagramComponent } from './icons/instagram.component'
+import { LinkedinComponent } from './icons/linkedin.component'
+import { TwitterComponent } from './icons/twitter.component'
+import { LogoComponent } from './icons/logo.component';
+import { ScrollEffectDirective } from './servicesAndDirectives/scroll-effect.directive'
+import { TriangleComponent } from './icons/triangle.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-hero-section.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { BlogComponent } from './pages/blog/blog.component';
     TriangleComponent,
     LoaderComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    BlogHeroSectionComponent,
+    BlogFooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
