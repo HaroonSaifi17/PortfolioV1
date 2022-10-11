@@ -18,3 +18,18 @@ h1 {
   position: relative;
   background-color: white;
 }
+.swrp{
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 40vw;
+  padding: 1.5vw;
+  color: var(--dark-navy);
+  border-radius: 50px;
+  border:0 solid var(--dark-navy);
+  background: var(--white);
+}
+input::placeholder{
+  color: var(--light-navy);
+}
