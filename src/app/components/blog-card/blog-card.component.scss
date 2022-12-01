@@ -1,0 +1,17 @@
+input {
+  background: var(--lightest-navy);
+  color: white;
+  margin: 1vw;
+  padding:calc(var(--font-size) * 0.6);
+  font-size: var(--font-size);
+  border: 0;
+  border-radius: 50px;
+}
+.wpr {
+  display: flex;
+  justify-content: center;
+}
+input::placeholder{
+  color: lightgrey;
+  font-family:Calibre ;
+}

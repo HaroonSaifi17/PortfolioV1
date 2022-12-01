@@ -1,5 +1,7 @@
 .wpr{
-  background: white;
+  background: var(--white);
+  border-top: 10px solid var(--lightest-navy);
+  border-bottom: 10px solid var(--lightest-navy);
   height: 100vh;
   width: 100vw;
 }

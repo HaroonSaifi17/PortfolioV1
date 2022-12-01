@@ -21,6 +21,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-hero-section.component';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-he
     HomeComponent,
     BlogComponent,
     BlogHeroSectionComponent,
-    BlogFooterComponent
+    BlogFooterComponent,
+    BlogCardComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

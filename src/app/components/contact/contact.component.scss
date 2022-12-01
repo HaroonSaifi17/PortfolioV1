@@ -1,22 +1,21 @@
 .c_wrapper {
   display: flex;
-  padding:0 10%;
+  padding: 10%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: clamp(400px,50vh,700px);
 }
 .c_head1 {
   font-family: SFMono;
   color: var(--green);
-  font-size: clamp(0.7rem, 2vw, 2rem);
+  font-size: calc(var(--font-size) * 0.8);
   margin-bottom: 3vw;
 }
 .c_head2 {
   font-family: Calibre;
   color: var(--lightest-slate);
   margin-bottom: 2vw;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: calc(var(--heading-size) * 0.5);
   text-align: center;
 }
 .c_para {
@@ -24,17 +23,17 @@
   color: var(--slate);
   margin: 0 auto;
   text-align: center;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: var(--font-size);
   max-width: 600px;
   margin-bottom: 7vw;
   line-height: 140%;
 }
 .c_link {
-  padding: clamp(1rem, 3vw, 2.5rem);
+  padding: var(--font-size);
   border: 1px solid var(--green);
-  border-radius: clamp(5px, 1vw, 15px);
+  border-radius: calc(var(--font-size) * 0.3);
   font-family: SFMono;
-  font-size: clamp(0.7rem, 2.5vw, 1.5rem);
+  font-size: var(--font-size);
   color: var(--green);
   text-decoration: none;
   margin: 0 auto;

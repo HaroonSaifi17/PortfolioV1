@@ -1,16 +1,16 @@
 .am {
-  padding:10%;
+  padding: 10%;
 }
 .am_num {
   color: var(--green);
   font-family: SFMono;
   margin-right: 10px;
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: calc(var(--font-size) * 0.8);
 }
 .am_head {
   color: var(--lightest-slate);
   font-family: CalibreBold;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: calc(var(--heading-size) * 0.5);
   position: relative;
 }
 .am_head::after {
@@ -30,7 +30,7 @@
 }
 .text {
   font-family: Calibre;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: var(--font-size);
   line-height: 140%;
   color: var(--slate);
   margin-bottom: 20px;
@@ -40,7 +40,7 @@
   margin-top: 20px;
 }
 .am_image {
-  width: 250px;
+  width: clamp(170px , 35vw ,300px);
   border-radius: 5px;
   mix-blend-mode: multiply;
 }
@@ -60,12 +60,12 @@
   list-style-type: none;
   margin-bottom: 10px;
 }
-.filter:hover{
+.filter:hover {
   background: transparent;
 }
 .p_div ul li p {
   font-family: SFMono;
-  font-size: clamp(0.8rem, 2.5vw, 2rem);
+  font-size: calc(var(--font-size) * 0.8);
   line-height: 140%;
   color: var(--light-slate);
   margin-left: 10px;

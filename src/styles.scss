@@ -25,6 +25,50 @@ body {
   --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
+  --font-size: 18px;
+  --heading-size: 30px;
+}
+@media (min-width: 200px) {
+  :root {
+    --font-size: 16px;
+    --heading-size: 40px;
+  }
+}
+@media (min-width: 300px) {
+  :root {
+    --font-size: 16px;
+    --heading-size: 45px;
+  }
+}
+@media (min-width: 400px) {
+  :root {
+    --font-size: 18px;
+    --heading-size: 50px;
+  }
+}
+@media (min-width: 600px) {
+  :root {
+    --font-size: 18px;
+    --heading-size: 60px;
+  }
+}
+@media (min-width: 800px) {
+  :root {
+    --font-size: 20px;
+    --heading-size: 70px;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    --font-size: 22px;
+    --heading-size: 80px;
+  }
+}
+@media (min-width: 2000px) {
+  :root {
+    --font-size: 25px;
+    --heading-size: 100px;
+  }
 }
 @font-face {
   font-family: 'SFMono';

@@ -7,7 +7,7 @@
   & p a {
     text-align: center;
     font-family: SFMono;
-    font-size: clamp(0.7rem ,3vw,1.2rem);
+    font-size: calc(var(--font-size) * 0.8);
     color: var(--lightest-slate);
     text-decoration: none;
   }
@@ -28,6 +28,9 @@ a:hover{
    color: var(--green);
 }
 @media (min-width: 700px) {
+  .f_wrapper{
+    margin:2vw 5vw ;
+  }
   .f_mail {
     display: block;
     position: fixed;
@@ -37,7 +40,7 @@ a:hover{
     & a {
       writing-mode: vertical-lr;
       font-family: SFMono;
-    font-size: clamp(0.7rem ,1.7vw,2.5rem);
+  font-size: calc(var(--font-size) * 0.8);
       color: var(--lightest-slate);
     }
   }

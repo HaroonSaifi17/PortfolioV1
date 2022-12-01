@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vw;
+  margin:2vw 5vw;
   & p,
   & p a {
     text-align: center;
     font-family: SFMono;
-    font-size: clamp(0.7rem ,3vw,1.2rem);
+    font-size: calc(var(--font-size) * 0.8);
     color: var(--lightest-slate);
     text-decoration: none;
   }

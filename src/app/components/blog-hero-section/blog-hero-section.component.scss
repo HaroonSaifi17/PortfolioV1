@@ -3,33 +3,9 @@
   display: flex;
   justify-content: center;
   background: transparent;
-  position: absolute;
-  top: -2vw;
-  right: 0;
-  z-index: 1;
 }
 h1 {
   font-family: CalibreBold;
-  font-size: 14.3vw;
+  font-size: calc(var(--heading-size) * 1);
   color: var(--lightest-slate);
-  text-shadow: 0 0 25px var(--lightest-slate);
-}
-.svg-wpr {
-  position: relative;
-  background-color: white;
-}
-.swrp{
-  display: flex;
-  justify-content: center;
-}
-input{
-  width: 40vw;
-  padding: 1.5vw;
-  color: var(--dark-navy);
-  border-radius: 50px;
-  border:0 solid var(--dark-navy);
-  background: var(--white);
-}
-input::placeholder{
-  color: var(--light-navy);
 }
