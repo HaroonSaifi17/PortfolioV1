@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -14,14 +15,14 @@ import { CodepenComponent } from './icons/codepen.component'
 import { InstagramComponent } from './icons/instagram.component'
 import { LinkedinComponent } from './icons/linkedin.component'
 import { TwitterComponent } from './icons/twitter.component'
-import { LogoComponent } from './icons/logo.component';
+import { LogoComponent } from './icons/logo.component'
 import { ScrollEffectDirective } from './servicesAndDirectives/scroll-effect.directive'
-import { TriangleComponent } from './icons/triangle.component';
-import { LoaderComponent } from './components/loader/loader.component';
-import { HomeComponent } from './pages/home/home.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-hero-section.component';
-import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { TriangleComponent } from './icons/triangle.component'
+import { LoaderComponent } from './components/loader/loader.component'
+import { HomeComponent } from './pages/home/home.component'
+import { BlogComponent } from './pages/blog/blog.component'
+import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-hero-section.component'
+import { BlogCardComponent } from './components/blog-card/blog-card.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,9 +44,9 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
     BlogComponent,
     BlogHeroSectionComponent,
     BlogFooterComponent,
-    BlogCardComponent
+    BlogCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
