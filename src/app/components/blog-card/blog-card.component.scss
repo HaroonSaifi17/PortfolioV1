@@ -1,17 +1,112 @@
 input {
   background: var(--lightest-navy);
-  color: white;
+  color: var(--lightest-slate);
   margin: 1vw;
-  padding:calc(var(--font-size) * 0.6);
+  padding: calc(var(--font-size) * 0.6);
+  padding-bottom: calc(var(--font-size) * 0.4);
   font-size: var(--font-size);
   border: 0;
   border-radius: 50px;
+  outline:none;
 }
 .wpr {
   display: flex;
   justify-content: center;
 }
-input::placeholder{
-  color: lightgrey;
-  font-family:Calibre ;
+input::placeholder {
+  color: var(--lightest-slate);
+  font-family: Calibre;
+}
+input:focus{
+  outline: 4px solid var(--slate);
+}
+.search {
+  margin: 1vw;
+  padding: 5px;
+  margin-left: 0;
+}
+.circle {
+  width: var(--font-size);
+  aspect-ratio: 1;
+  border-radius: 50px;
+  border: 5px solid var(--lightest-navy);
+  position: relative;
+}
+.circle::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 90%;
+  height:5px ;
+  background: var(--lightest-navy);
+  top: 100%;
+  left: 80%;
+  transform: rotate(45deg);
+}
+.c-wpr{
+  margin:10px 5vw;
+}
+h3{
+  font-family: CalibreBold;
+  font-size: calc(var(--heading-size) * 0.4);
+  color: var(--dark-navy);
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+li{
+  list-style: none;
+}
+.cat{
+  display: inline-block;
+  padding: 10px;
+  font-family: Calibre;
+  font-size: calc(var(--font-size) * 0.7);
+  color: var(--slate);
+  background: var(--lightest-navy);
+  border-radius: 50px;
+  margin: 5px;
+  line-height: 110%;
+  padding-bottom: 8px;
+  margin-left: 0;
+}
+.d-wpr{
+  margin:1vw 5vw;
+}
+.card{
+  max-width: 800px;
+  margin:20px auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1vw;
+  padding: 20px;
+}
+.date{
+  font-family: SFMono;
+  font-size: calc(var(--font-size) * 0.6);
+  margin: 5px 0;
+  color: grey;
+}
+h4{
+  font-family: CalibreBold;
+  font-size: calc(var(--heading-size) * 0.4);
+  color: var(--dark-navy);
+  margin: 5px 0;
+}
+.dis{
+  color: grey;
+  margin: 5px 0;
+}
+.more{
+  color: var(--green);
+  font-family: CalibreBold;
+  padding: 5px;
+}
+.p-wpr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageno{
+  margin: 10px auto;
 }

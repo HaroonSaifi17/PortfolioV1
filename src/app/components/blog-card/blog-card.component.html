@@ -1,6 +1,29 @@
 <div class="wpr">
-  <input type="search" placeholder="Search Blogs" >
-    <p *ngFor="let item of data.blogs">
-    {{item.title}}
-  </p>
+  <input type="search" placeholder="Search Blogs" />
+  <a href="" class="search">
+    <div class="circle"></div>
+  </a>
+</div>
+<div class="c-wpr">
+  <h3>Category</h3>
+  <ul>
+    <li *ngFor="let genre of data.genres">
+      <a class="cat" href="">{{ genre }}</a>
+    </li>
+  </ul>
+</div>
+<div class="d-wpr">
+  <div *ngFor="let item of data.blogs" class="card">
+    <div class="date">{{ item.date }}</div>
+    <h4>{{ item.title }}</h4>
+    <div class="dis">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+      delectus libero! Quisquam, saepe necessitatibus aliquam consequatur natus
+      sapiente quam fuga!
+    </div>
+    <a href="" class="more">Read more</a>
+  </div>
+</div>
+<div class="p-wpr">
+  <a href="" class="pageno">{{ data.page }}</a>
 </div>
