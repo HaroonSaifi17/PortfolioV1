@@ -8,8 +8,16 @@ import { BlogPostService } from 'src/app/servicesAndDirectives/blog-post.service
 })
 export class BlogCardComponent implements OnInit {
   data: any
+  blogPostService:any
+  search:any
+  gen:string="";
   constructor(blogPostService: BlogPostService) {
-    blogPostService.getBlogs().subscribe((d) => {
+    this.blogPostService=blogPostService
+    this.search={value:""}
+    this.getblogs(this.search)
+  }
+  getblogs(search:any){
+    this.blogPostService.getBlogs(search.value).subscribe((d:any) => {
       this.data = d
     })
   }

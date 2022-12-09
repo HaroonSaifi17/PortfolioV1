@@ -1,6 +1,6 @@
 <div class="wpr">
-  <input type="search" placeholder="Search Blogs" />
-  <a href="" class="search">
+  <input #f (search)="getblogs($event.target)" type="search" placeholder="Search Blogs" />
+  <a (click)="getblogs(f)" class="search">
     <div class="circle"></div>
   </a>
 </div>
