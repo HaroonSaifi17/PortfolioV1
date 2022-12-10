@@ -1,6 +1,6 @@
 <div class="wpr">
-  <input #f (search)="getblogs($event.target,'')" (search)="back()" type="search" placeholder="Search Blogs" />
-  <a (click)="getblogs(f,'')" (click)="back()" class="search">
+  <input #f (search)="getblogs($event.target,'',h2)" (search)="back()" type="search" placeholder="Search Blogs" />
+  <a (click)="getblogs(f,'',h2)" (click)="back()" class="search">
     <div class="circle"></div>
   </a>
 </div>
@@ -8,10 +8,11 @@
   <h3>Category</h3>
   <ul>
     <li *ngFor="let genre of data.genres">
-      <a #c (click)="click(c,f,genre)" class="cat">{{ genre }}</a>
+      <a #c (click)="click(c,f,genre,h2)" class="cat">{{ genre }}</a>
     </li>
   </ul>
 </div>
+  <h2 #h2>We couldn't find any blog post</h2>
 <div class="d-wpr">
   <div *ngFor="let item of data.blogs" class="card">
     <div class="date">{{ item.date }}</div>

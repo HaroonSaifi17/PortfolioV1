@@ -15,36 +15,40 @@ export class BlogCardComponent implements OnInit {
   constructor(blogPostService: BlogPostService) {
     this.blogPostService = blogPostService
     this.search = { value: '' }
-    this.getblogs(this.search, this.gen)
+    this.getblogs(this.search, this.gen, {})
   }
-  getblogs(search: any, gen: string) {
+  getblogs(search: any, gen: string, h2: any) {
     this.blogPostService.getBlogs(search.value, gen).subscribe((d: any) => {
       this.data = d
+      if (d.total == 0) {
+        h2.style.display = 'block'
+      } else {
+        h2.style.display = 'none'
+      }
     })
   }
-  back(){
-    this.c.style.background="var(--lightest-navy)"
+  back() {
+    this.c.style.background = 'var(--lightest-navy)'
   }
-  click(c: any,search:any,gen:string) {
+  click(c: any, search: any, gen: string, h2: any) {
     if (this.c == c) {
-      if(c.style.background=="var(--dark-navy)"){
-        c.style.background="var(--lightest-navy)"
-        gen=''
-        this.getblogs(search,gen)
-      }
-      else{
-       c.style.background="var(--dark-navy)"
-        this.getblogs(search,gen)
+      if (c.style.background == 'var(--dark-navy)') {
+        c.style.background = 'var(--lightest-navy)'
+        gen = ''
+        this.getblogs(search, gen, h2)
+      } else {
+        c.style.background = 'var(--dark-navy)'
+        this.getblogs(search, gen, h2)
       }
     } else {
       if (this.c.style.background == c.style.background) {
         c.style.background = 'var(--dark-navy)'
-        this.getblogs(search,gen)
+        this.getblogs(search, gen, h2)
         this.c = c
       } else {
         c.style.background = 'var(--dark-navy)'
         this.c.style.background = 'var(--lightest-navy)'
-        this.getblogs(search,gen)
+        this.getblogs(search, gen, h2)
         this.c = c
       }
     }

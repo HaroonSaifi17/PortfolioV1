@@ -46,6 +46,11 @@ input:focus{
 .c-wpr{
   margin:10px 5vw;
 }
+h2{
+  display: none;
+  text-align: center;
+  margin: 40px;
+}
 h3{
   font-family: CalibreBold;
   font-size: calc(var(--heading-size) * 0.4);
