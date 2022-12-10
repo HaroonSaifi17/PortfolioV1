@@ -11,14 +11,15 @@ export class BlogCardComponent implements OnInit {
   blogPostService: any
   search: any
   gen: string = ''
+  pageno:number=1
   c: any = { style: { background: 'var(--lightest-navy)' } }
   constructor(blogPostService: BlogPostService) {
     this.blogPostService = blogPostService
     this.search = { value: '' }
-    this.getblogs(this.search, this.gen, {})
+    this.getblogs(this.search, this.gen, {},this.pageno)
   }
-  getblogs(search: any, gen: string, h2: any) {
-    this.blogPostService.getBlogs(search.value, gen).subscribe((d: any) => {
+  getblogs(search: any, gen: string, h2: any,pageno:number): void {
+    this.blogPostService.getBlogs(search.value, gen,pageno).subscribe((d: any) => {
       this.data = d
       if (d.total == 0) {
         h2.style.display = 'block'
@@ -27,32 +28,36 @@ export class BlogCardComponent implements OnInit {
       }
     })
   }
-  back() {
+  back(): void {
     this.c.style.background = 'var(--lightest-navy)'
   }
-  click(c: any, search: any, gen: string, h2: any) {
+  click(c: any, search: any, gen: string, h2: any): void {
     if (this.c == c) {
       if (c.style.background == 'var(--dark-navy)') {
         c.style.background = 'var(--lightest-navy)'
         gen = ''
-        this.getblogs(search, gen, h2)
+        this.getblogs(search, gen, h2,this.pageno)
       } else {
         c.style.background = 'var(--dark-navy)'
-        this.getblogs(search, gen, h2)
+        this.getblogs(search, gen, h2,this.pageno)
       }
     } else {
       if (this.c.style.background == c.style.background) {
         c.style.background = 'var(--dark-navy)'
-        this.getblogs(search, gen, h2)
+        this.getblogs(search, gen, h2,this.pageno)
         this.c = c
       } else {
         c.style.background = 'var(--dark-navy)'
         this.c.style.background = 'var(--lightest-navy)'
-        this.getblogs(search, gen, h2)
+        this.getblogs(search, gen, h2,this.pageno)
         this.c = c
       }
     }
   }
 
+  nextpage(p:number):void{
+    this.search = { value: '' }
+    this.getblogs(this.search, this.gen, {},p)
+  }
   ngOnInit(): void {}
 }

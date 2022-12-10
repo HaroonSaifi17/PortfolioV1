@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core'
 export class BlogPostService {
   constructor(private http: HttpClient) {
   }
-  getBlogs(search:string,genre:string){
-    return this.http.get('http://localhost:4040/blogs?search=' + search + '&&genre=' + genre)
+  getBlogs(search:string,genre:string,page:number){
+    return this.http.get('http://localhost:4040/blogs?search=' + search + '&&genre=' + genre + '&&page=' + page)
   }
 }

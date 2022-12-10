@@ -112,6 +112,15 @@ h4{
   align-items: center;
   justify-content: center;
 }
+.p-wpr div{
+  background: blue;
+  margin: 10px 10px;
+  background: var(--lightest-navy);
+  border-radius:50px;
+}
 .pageno{
-  margin: 10px auto;
+  padding: 5px 10px;
+  color: var(--white);
+  display: inline-block;
+  padding-bottom: 0;
 }
