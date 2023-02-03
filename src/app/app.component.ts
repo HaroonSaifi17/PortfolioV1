@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core'
+import eruda from 'eruda'
 import { LoaderDelayService } from './servicesAndDirectives/loader-delay.service'
 
 @Component({
@@ -9,6 +10,7 @@ import { LoaderDelayService } from './servicesAndDirectives/loader-delay.service
 export class AppComponent implements OnInit {
 constructor(loaderDelay:LoaderDelayService){
     loaderDelay.loader()
+    eruda.init()
   }
   Timer: boolean = true
   ngOnInit(): void {

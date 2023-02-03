@@ -1,32 +1,50 @@
 <div class="wpr">
-  <input #f (search)="getblogs($event.target, '', h2, 1)" (search)="back()" type="search" placeholder="Search Blogs" />
-  <a (click)="getblogs(f, '', h2, 1)" (click)="back()" class="search">
+  <input
+    #f
+    (search)="search = f.value; gen = ''; getblogs()"
+    type="search"
+    placeholder="Search Blogs"
+  />
+  <a (click)="search = f.value; getblogs()" class="search">
     <div class="circle"></div>
   </a>
 </div>
-<div class="c-wpr">
-  <h3>Category</h3>
-  <ul>
-    <li *ngFor="let genre of data.genres">
-      <a #c (click)="click(c, f, genre, h2)" class="cat">{{ genre }}</a>
-    </li>
-  </ul>
-</div>
-<h2 #h2>We couldn't find any blog post</h2>
-<div class="d-wpr">
-  <div *ngFor="let item of data.blogs" class="card">
-    <div class="date">{{ item.date }}</div>
-    <h4>{{ item.title }}</h4>
-    <div class="dis">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-      delectus libero! Quisquam, saepe necessitatibus aliquam consequatur natus
-      sapiente quam fuga!
+<div *ngIf="status == 'call'" class="call">
+  <div class="c-wpr">
+    <h3>Category</h3>
+    <ul>
+      <li *ngFor="let cat of data.genres">
+        <a
+          [class.gendark]="cat == gen"
+          (click)="getcat(cat); search = ''; getblogs()"
+          class="cat"
+          >{{ cat }}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div *ngFor="let item of data.blogs" class="d-wpr">
+    <div class="card">
+      <div class="date">{{ item.date }}</div>
+      <h4>{{ item.title }}</h4>
+      <div class="dis">{{ item.description }}</div>
+      <a href="" class="more">Read more</a>
     </div>
-    <a href="" class="more">Read more</a>
+  </div>
+  <div *ngIf="total == 0">
+    <h4>No Blogs Found</h4>
+  </div>
+  <div class="p-wpr">
+    <div *ngFor="let page of data.pageno">
+      <a
+        [class.gendark]="page == pageno"
+        (click)="pageno = page; getblogs()"
+        class="pageno"
+        >{{ page }}</a
+      >
+    </div>
   </div>
 </div>
-<div class="p-wpr">
-  <div (click)="nextpage(page)" *ngFor="let page of data.pageno">
-    <a class="pageno">{{ page }}</a>
-  </div>
+<div *ngIf="status == 'error'" class="error">
+  <h3>{{ error }}</h3>
 </div>

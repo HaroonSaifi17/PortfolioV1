@@ -7,57 +7,39 @@ import { BlogPostService } from 'src/app/servicesAndDirectives/blog-post.service
   styleUrls: ['./blog-card.component.scss'],
 })
 export class BlogCardComponent implements OnInit {
-  data: any
-  blogPostService: any
-  search: any
+  blogservice: any | undefined
+  data: any | undefined
+  search: any = ''
   gen: string = ''
-  pageno:number=1
-  c: any = { style: { background: 'var(--lightest-navy)' } }
+  pageno: number = 1
+  status: string = 'uncall'
+  error: any | undefined
+  total: Number | undefined
   constructor(blogPostService: BlogPostService) {
-    this.blogPostService = blogPostService
-    this.search = { value: '' }
-    this.getblogs(this.search, this.gen, {},this.pageno)
+    this.blogservice = blogPostService
+    this.getblogs()
   }
-  getblogs(search: any, gen: string, h2: any,pageno:number): void {
-    this.blogPostService.getBlogs(search.value, gen,pageno).subscribe((d: any) => {
-      this.data = d
-      if (d.total == 0) {
-        h2.style.display = 'block'
-      } else {
-        h2.style.display = 'none'
+  getblogs() {
+    this.blogservice.getBlogs(this.search, this.gen, this.pageno).subscribe(
+      (d: any) => {
+        this.data = d
+        this.total = this.data.blogs.length
+      },
+      (e: any) => {
+        this.status = 'error'
+        this.error = e.message
+      },
+      () => {
+        this.status = 'call'
       }
-    })
+    )
   }
-  back(): void {
-    this.c.style.background = 'var(--lightest-navy)'
-  }
-  click(c: any, search: any, gen: string, h2: any): void {
-    if (this.c == c) {
-      if (c.style.background == 'var(--dark-navy)') {
-        c.style.background = 'var(--lightest-navy)'
-        gen = ''
-        this.getblogs(search, gen, h2,this.pageno)
-      } else {
-        c.style.background = 'var(--dark-navy)'
-        this.getblogs(search, gen, h2,this.pageno)
-      }
+  getcat(cat: string) {
+    if (cat == this.gen) {
+      this.gen = ''
     } else {
-      if (this.c.style.background == c.style.background) {
-        c.style.background = 'var(--dark-navy)'
-        this.getblogs(search, gen, h2,this.pageno)
-        this.c = c
-      } else {
-        c.style.background = 'var(--dark-navy)'
-        this.c.style.background = 'var(--lightest-navy)'
-        this.getblogs(search, gen, h2,this.pageno)
-        this.c = c
-      }
+      this.gen = cat
     }
-  }
-
-  nextpage(p:number):void{
-    this.search = { value: '' }
-    this.getblogs(this.search, this.gen, {},p)
   }
   ngOnInit(): void {}
 }
