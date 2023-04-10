@@ -125,5 +125,7 @@ h4{
   padding-bottom: 0;
 }
 .gendark{
-  background: white;
+  background: var(--lightest-slate);
+  border-radius: 100px;
+  color: black;
 }

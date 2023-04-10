@@ -22,7 +22,9 @@ import { LoaderComponent } from './components/loader/loader.component'
 import { HomeComponent } from './pages/home/home.component'
 import { BlogComponent } from './pages/blog/blog.component'
 import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-hero-section.component'
-import { BlogCardComponent } from './components/blog-card/blog-card.component'
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { BlogPageComponent } from './components/blog-page/blog-page.component';
+import { MainComponent } from './pages/main.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,9 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component'
     BlogHeroSectionComponent,
     BlogFooterComponent,
     BlogCardComponent,
+    BlogPageComponent,
+    MainComponent,
+    NavBarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -23,12 +23,12 @@
       </li>
     </ul>
   </div>
-  <div *ngFor="let item of data.blogs" class="d-wpr">
+  <div [routerLink]="[item._id]" *ngFor="let item of data.blogs" class="d-wpr">
     <div class="card">
       <div class="date">{{ item.date }}</div>
       <h4>{{ item.title }}</h4>
       <div class="dis">{{ item.description }}</div>
-      <a href="" class="more">Read more</a>
+      <a [routerLink]="[item._id]" class="more">Read more</a>
     </div>
   </div>
   <div *ngIf="total == 0">
