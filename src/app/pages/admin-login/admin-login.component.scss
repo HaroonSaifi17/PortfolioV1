@@ -1,0 +1,11 @@
+.wpr{
+  background: var(--navy);
+  & div {
+    & div{
+      background: var(--light-navy);
+    }
+  }
+}
+button{
+      background: var(--light-navy);
+}

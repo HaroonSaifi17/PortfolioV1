@@ -6,11 +6,12 @@
   scroll-behavior: smooth;
   font-family: Calibre;
   font-size: var(--font-size);
+  background:transparent;
 }
 
 body {
-  background: var(--navy);
   transition-duration: 500ms;
+  min-height: 100vh;
 }
 :root {
   --dark-navy: #020c1b;
@@ -142,3 +143,9 @@ body {
   transition-duration: 600ms;
   transition-timing-function: ease-in;
 }
+.b-wpr{
+  background: var(--navy);
+}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

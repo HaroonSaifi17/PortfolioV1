@@ -25,6 +25,7 @@ import { BlogHeroSectionComponent } from './components/blog-hero-section/blog-he
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { MainComponent } from './pages/main.component';
+import { AdminLoginComponent } from './pages/admin-login/admin-login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { MainComponent } from './pages/main.component';
     BlogCardComponent,
     BlogPageComponent,
     MainComponent,
-    NavBarComponent
+    NavBarComponent,
+   AdminLoginComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

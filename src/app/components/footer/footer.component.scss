@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin: 5vw;
+  margin-bottom: 0;
+  padding-bottom: 5vw;
   & p,
   & p a {
     text-align: center;
@@ -32,6 +34,7 @@ a:hover{
     margin:2vw 5vw ;
   }
   .f_mail {
+  padding-bottom: auto;
     display: block;
     position: fixed;
     bottom: 0;
