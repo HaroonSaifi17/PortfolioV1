@@ -1,3 +1,6 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +11,15 @@
   font-size: var(--font-size);
   background:transparent;
 }
+html{
+  background: var(--navy);
+}
 
 body {
   transition-duration: 500ms;
   min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
 }
 :root {
   --dark-navy: #020c1b;
@@ -28,50 +36,6 @@ body {
   --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
-  --font-size: 18px;
-  --heading-size: 30px;
-}
-@media (min-width: 200px) {
-  :root {
-    --font-size: 16px;
-    --heading-size: 40px;
-  }
-}
-@media (min-width: 300px) {
-  :root {
-    --font-size: 16px;
-    --heading-size: 45px;
-  }
-}
-@media (min-width: 400px) {
-  :root {
-    --font-size: 18px;
-    --heading-size: 50px;
-  }
-}
-@media (min-width: 600px) {
-  :root {
-    --font-size: 18px;
-    --heading-size: 60px;
-  }
-}
-@media (min-width: 800px) {
-  :root {
-    --font-size: 20px;
-    --heading-size: 70px;
-  }
-}
-@media (min-width: 1000px) {
-  :root {
-    --font-size: 22px;
-    --heading-size: 80px;
-  }
-}
-@media (min-width: 2000px) {
-  :root {
-    --font-size: 25px;
-    --heading-size: 100px;
-  }
 }
 @font-face {
   font-family: 'SFMono';
@@ -146,6 +110,6 @@ body {
 .b-wpr{
   background: var(--navy);
 }
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+svg{
+  display: inline-block;
+}

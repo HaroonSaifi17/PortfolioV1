@@ -2,18 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vw;
   margin-bottom: 0;
-  padding-bottom: 5vw;
+  padding: 20px 0;
   & p,
   & p a {
     text-align: center;
     font-family: SFMono;
-    font-size: calc(var(--font-size) * 0.8);
     color: var(--lightest-slate);
     text-decoration: none;
   }
-  & p a:hover{
+  & p a:hover {
     color: var(--green);
   }
 }
@@ -26,15 +24,22 @@
 .f_mail {
   display: none;
 }
-a:hover{
-   color: var(--green);
+a:hover {
+  color: var(--green);
 }
-@media (min-width: 700px) {
-  .f_wrapper{
-    margin:2vw 5vw ;
+@media (max-width: 600px) {
+.f_wrapper {
+  border-top:5px solid var(--lightest-navy);
+  padding:20px 15px;
+}
+}
+@media (min-width: 600px) {
+  .f_wrapper {
+    margin: 2vw 5vw;
+    margin-bottom: 0;
   }
   .f_mail {
-  padding-bottom: auto;
+    padding-bottom: auto;
     display: block;
     position: fixed;
     bottom: 0;
@@ -43,14 +48,13 @@ a:hover{
     & a {
       writing-mode: vertical-lr;
       font-family: SFMono;
-  font-size: calc(var(--font-size) * 0.8);
-      color: var(--lightest-slate);
+      color: var(--light-slate);
     }
   }
-    .f_mail a:hover{
-      color: var(--green);
-    }
-  
+  .f_mail a:hover {
+    color: var(--green);
+  }
+
   .logo {
     display: flex;
     flex-direction: column;
@@ -65,7 +69,7 @@ a:hover{
   .f_line {
     height: 20vh;
     width: 1px;
-    background: var(--light-slate);
+    background: var(--slate);
     margin: 0 auto;
     margin-top: 10px;
   }

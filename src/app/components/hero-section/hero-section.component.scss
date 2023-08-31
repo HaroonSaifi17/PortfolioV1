@@ -1,22 +1,32 @@
 .hero {
-  padding: 0 10%;
+  padding: 0 50px;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    padding: 0 20px;
+  }
+}
+
 h1 {
   color: var(--green);
   margin-bottom: 3%;
   font-family: SFMono;
-  font-size: var(--font-size);
   margin-left: 5px;
 }
 h2 {
   color: var(--lightest-slate);
   font-family: CalibreBold;
-  font-size: var(--heading-size);
   line-height: 90%;
   margin-top: 10px;
 }
@@ -24,16 +34,14 @@ h2 {
 h3 {
   color: var(--slate);
   font-family: CalibreBold;
-  font-size: var(--heading-size);
   margin-top: 10px;
   line-height: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.hero__para{
-  color: var(--slate);
+.hero__para {
+  color: var(--light-slate);
   font-family: Calibre;
-  font-size: var(--font-size);
   line-height: 140%;
   max-width: 540px;
 }
@@ -52,4 +60,3 @@ h3 {
     opacity: 1;
   }
 }
-
